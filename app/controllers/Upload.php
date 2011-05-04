@@ -123,7 +123,7 @@ class App_Controller_Upload extends Fz_Controller {
         $file->setAvailableFrom ($availableFrom);
         $file->setAvailableUntil($availableUntil);
         $file->notify_uploader  = isset ($post['email-notifications']);
-        if (! empty ($post ['password']))
+        if (isset($_POST['use-password']))
             $file->setPassword  ($post ['password']);
 
         try {
@@ -131,6 +131,7 @@ class App_Controller_Upload extends Fz_Controller {
 
             if ($file->moveUploadedFile ($uploadedFile)) {
                 fz_log ('Saved "'.$file->file_name.'"['.$file->id.'] uploaded by '.$user['email']);
+                fz_log ('Infos "'.$post ['password'].'');
                 return $file;
             }
             else {
@@ -152,15 +153,16 @@ class App_Controller_Upload extends Fz_Controller {
     private function sendFileUploadedMail (App_Model_File $file) {
         if (! $file->notify_uploader)
             return;
-
+	if (isset($_POST['use-password'])){$sendpassword = $_POST['password'];}else{$sendpassword = "NO_PASSWORD_DEFINED";}
         $user = $this->getUser ();
         $subject = __r('[FileZ] "%file_name%" uploaded successfuly',
             array('file_name' => $file->file_name));
-        $msg = __r('email_upload_success (%file_name%, %file_url%, %filez_url%, %available_from%, %available_until%)',
+        $msg = __r('email_upload_success (%file_name%, %file_url%, %filez_url%, %file_password%, %available_from%, %available_until%)',
             array('file_name' => $file->file_name,
                   'available_from'  => $file->getAvailableFrom()->toString  (Zend_Date::DATE_LONG),
                   'available_until' => $file->getAvailableUntil()->toString (Zend_Date::DATE_LONG),
                   'file_url'  => $file->getDownloadUrl(),
+                  'file_password'  => $sendpassword,
                   'filez_url' => fz_url_for ('/', (fz_config_get ('app', 'https') == 'always'))
             )
         );

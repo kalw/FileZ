@@ -14,10 +14,10 @@
 
 # Directory where log file will be stored. Could be the same as in filez.ini
 # In this case, messages will be appended at the end of the file
-LOG_DIR=/var/log/filez
+LOG_DIR=/usr/local/www/filez/logs
 
 # Url of filez web root
-URL=http://filez-url.com
+URL=http://file.digitas.fr
 
 LANG=fr
 

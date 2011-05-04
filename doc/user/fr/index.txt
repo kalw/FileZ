@@ -1,7 +1,7 @@
 
 # Introduction
 
-FileZ est une application web permettant de déposer et gérer des fichiers destinés
+DigitasFileManager est une application web permettant de déposer et gérer des fichiers destinés
 à être partagés grâce à une URL unique.
 
 # Guide d'utilisation

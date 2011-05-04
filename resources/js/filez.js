@@ -318,7 +318,7 @@ var reloadUploadForm = function () {
     $(settings.progressBox).hide ();
     $(settings.loadingBox).hide ();
     $('#upload-id').val (uniqid ()); // upload id reset
-    $('#input-password').hide();
+    //$('#input-password').hide();
 };
 
 

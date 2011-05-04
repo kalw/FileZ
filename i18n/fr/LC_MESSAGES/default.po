@@ -58,16 +58,18 @@ msgstr ""
 
 #: /home/didrya/filez/app/controllers/Upload.php:157
 msgid "[FileZ] \"%file_name%\" uploaded successfuly"
-msgstr "[Filez] Votre fichier \"%file_name%\" a correctement été envoyé"
+msgstr "Votre fichier \"%file_name%\" a correctement été envoyé"
 
 #: /home/didrya/filez/app/controllers/Upload.php:159
-msgid "email_upload_success (%file_name%, %file_url%, %filez_url%, %available_from%, %available_until%)"
+msgid "email_upload_success (%file_name%, %file_url%, %filez_url%, %file_password%, %available_from%, %available_until%)"
 msgstr ""
 "Bonjour,\n"
 "\n"
-"Votre fichier \"%file_name%\" a bien été déposé sur la plateforme Filez.\n"
+"Votre fichier \"%file_name%\" a bien été déposé .\n"
 "\n"
 "Veuillez communiquer l'adresse suivante aux personnes avec qui vous désirez partager ce fichier, afin qu'elles puissent le télécharger : %file_url%\n"
+"\n"
+"Le password pour y acceder est : %file_password%\n"
 "\n"
 "Votre fichier restera disponible à cette adresse du %available_from% au %available_until%.\n"
 "\n"
@@ -134,7 +136,7 @@ msgstr "Fichier supprimé"
 
 #: /home/didrya/filez/app/controllers/File.php:163
 msgid "[FileZ] \"%sender%\" wants to share a file with you"
-msgstr "[FileZ] %sender% souhaite partager un fichier avec vous"
+msgstr "%sender% souhaite partager un fichier avec vous"
 
 #: /home/didrya/filez/app/controllers/File.php:165
 msgid "email_share_file (%file_name%, %file_url%, %sender%, %msg%)"

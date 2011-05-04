@@ -599,7 +599,7 @@ div.lim-debug hr {display: none;}
 .awesome:hover { background-color: #111; color: #fff;text-shadow: 0 -1px 1px rgba(0,0,0,0.4);}
 .awesome:active { top: 1px; }
 
-.blue.awesome, .blue.awesome:visited { background-color: #1E52A1; }
+.blue.awesome, .blue.awesome:visited { background-color: #BC0021; }
 .blue.awesome:hover                  { background-color: #376EBF; }
 .awesome.large {
   padding: 6px 20px 6px 20px;

@@ -37,6 +37,7 @@
 class App_Model_File extends Fz_Db_Table_Row_Abstract {
 
     protected $_tableClass = 'App_Model_DbTable_File';
+    protected $sendpassword ;
 
     /**
      * Constructor

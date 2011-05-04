@@ -37,11 +37,11 @@
       </label>
     </li>
     <li id="option-use-password">
-      <input type="checkbox" name="use-password" id="use-password"/>
+      <input type="checkbox" name="use-password" id="use-password" checked="checked" />
       <label for="use-password" title="<?php echo __('Ask a password to people who will download your file') ?>">
         <?php echo __('Use a password to download') ?>
       </label>
-      <input type="password" id="input-password" name="password" class="password" autocomplete="off" size="5"/>
+<input type="text" id="input-password" name="password" class="password" autocomplete="off" size="6" value="<?php $tmp=substr(sha1(rand(100000,999999)),0,8); echo($tmp)?>"/>
     </li>
   </ul>
   <div id="upload">
@@ -114,12 +114,12 @@
       });
       
       // Show password box on checkbox click
-      $('input.password').hide();
+      //$('input.password').hide();
       $('#use-password, #option-use-password label').click (function () { // IE quirk fix
         if ($('#use-password').attr ('checked')) {
             $('input.password').show().focus();
         } else {
-            $('input.password').val('').hide();
+            $('input.password').hide();
         }
 
       });

@@ -41,7 +41,7 @@ msgstr "TB"
 #: /home/didrya/filez/app/controllers/Admin.php:58
 #, fuzzy
 msgid "[FileZ] Your file \"%file_name%\" is going to be deleted"
-msgstr "[FileZ] Se borrará el archivo \"%file_name%\""
+msgstr "Se borrará el archivo \"%file_name%\""
 
 #: /home/didrya/filez/app/controllers/Admin.php:60
 msgid "email_delete_notif (%file_name%, %file_url%, %filez_url%, %available_until%)"
@@ -58,16 +58,18 @@ msgstr ""
 
 #: /home/didrya/filez/app/controllers/Upload.php:157
 msgid "[FileZ] \"%file_name%\" uploaded successfuly"
-msgstr "[Filez] El fichero \"%file_name%\" se ha subido correctamente."
+msgstr "El fichero \"%file_name%\" se ha subido correctamente."
 
 #: /home/didrya/filez/app/controllers/Upload.php:159
-msgid "email_upload_success (%file_name%, %file_url%, %filez_url%, %available_from%, %available_until%)"
+msgid "email_upload_success (%file_name%, %file_url%, %filez_url%, %file_password%, %available_from%, %available_until%)"
 msgstr ""
 "Hola,\n"
 "\n"
 "Su fichero \"%file_name%\" Se ha registrado correctamente en Ymedia_conecta.\n"
 "\n"
 "Por favor, comuniquen la siguiente dirección a las personas con las que desea compartir este fichero, con el fin de que puedan descargarlo:  %file_url%\n"
+"\n"
+"El contrasena para acceser es : %file_password%  \n"
 "\n"
 "Su fichero quedará disponible en esta dirección desde el %available_from% hasta el %available_until%.\n"
 "\n"
@@ -134,7 +136,7 @@ msgstr "Archivo borrado"
 
 #: /home/didrya/filez/app/controllers/File.php:163
 msgid "[FileZ] \"%sender%\" wants to share a file with you"
-msgstr "[FileZ] %sender% Quiere compartir un archivo contigo"
+msgstr "%sender% Quiere compartir un archivo contigo"
 
 #: /home/didrya/filez/app/controllers/File.php:165
 msgid "email_share_file (%file_name%, %file_url%, %sender%, %msg%)"
